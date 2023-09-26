@@ -1,0 +1,21 @@
+public class Pessoa {
+	//aula 4.2 Softblue
+  //Código em Java - Java's Code
+	String nome;
+	int numFigurinhas;
+
+	void receber(int numFigurinhas) {
+		//this é usado para não ambiguidade com a variável num
+		this.numFigurinhas += numFigurinhas;
+	
+	}
+	//void significa que não retornará nada
+	//quem chamou o método, não está esperando retorno
+
+	void dar(int numFigurinhas, Pessoa p) {
+		this.numFigurinhas -= numFigurinhas;
+		//Uma forma de fazer = 
+		//p.numFigurinhas += numFigurinhas;
+		p.receber(numFigurinhas);	
+	}
+}
